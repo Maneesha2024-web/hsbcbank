@@ -1,0 +1,455 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 1em;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 10%  auto 10%;
+  grid-template-areas:
+      'header header header header'
+      'nav main main main'
+      'footer footer footer footer';
+  row-gap: 0px;
+  column-gap: 0px;
+}
+
+header {
+  background-color: rgb(146, 163, 201);
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.img-logo {
+  width: 8%;/*50px*/
+  height: auto;
+  padding-top: 15px;
+}
+
+.bank-name {
+  margin-left: 10px; /* Space between logo and text */
+  font-size: 1.5em; /* Adjust as needed */
+  color: white; /* Set the color to white to match the theme */
+  display: inline-block;
+  vertical-align: middle; /* Align the text vertically with the image */
+  padding-bottom: 25px;
+  padding-left: 15px;
+}
+
+.header-common {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 10px;
+  flex: 1;
+}
+
+.header1 { background-color: rgb(146, 163, 201); }
+.header2 { background-color: rgb(146, 163, 201); }
+.header3 { background-color: rgb(146, 163, 201); }
+.header4 { background-color: rgb(146, 163, 201); }
+.header5 { background-color: rgb(146, 163, 201); }
+
+.header1 a, .header2 a, .header3 a, .header4 a, .header5 a {
+  text-decoration: none;
+  color: inherit; /* This keeps the color the same as the parent div */
+}
+
+menu {
+  background-color: rgb(46, 46, 48);
+  color: white;
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+menu ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+menu li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+main {
+  background: rgb(200, 200, 206);
+  color: white;
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+nav {
+  background-color: rgb(146, 163, 201);
+  color: white;
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  background-color: rgb(146, 163, 201);
+  color: white;
+  grid-area: footer;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  padding-top: 2%;
+}
+
+.slider {
+  width: 100%;/*80%;*/
+  height:100%;
+  max-width: 1600px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/*Start of drop down model*/
+#online-banking {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  margin-top: 150px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(146, 163, 201);
+}
+
+#online-banking:hover .dropdown-content {
+  display: block;
+}
+/*End of Drop down model*/
+
+/*Start of contact cards*/
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px; /* Space between cards */
+}
+
+.card {
+  background-color: white;
+  width: 300px; /* Set a fixed width for cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card img {
+  width: 25%;
+  height: 25%; /* Fixed height for image */
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0;
+  font-size: 1.2em;
+  color: black;
+}
+
+.card p {
+  padding: 0 15px;
+  flex-grow: 1; /* Pushes the button to the bottom */
+  color: black;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 15px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/*end of contact page cards*/
+/*Start of form card*/
+.cards-container-reg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-reg {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 600px;
+  width: 100%;
+}
+.card-reg h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/*end of form card*/
+/*Model structure for online banking*/
+
+#online-banking-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*end of model*/
+/*Start of nav*/
+.sidebar {
+  background-color: rgb(146, 163, 201);
+  color: white;
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: rgb(120, 133, 168);
+}
+/*end of nav*/
+
+/*Start card-findus*/
+.cards-container-findus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}
+
+.card-findus {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+}
+
+.card-findus img {
+  width: 50px; /* Adjusted image size */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card-findus h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: black;
+}
+
+.card-findus p {
+  margin: 5px 0;
+  color: black;
+}
+
+/*end of card-findus*/
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  body {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-areas:
+          'header'
+          'menu'
+          'main'
+          'nav'
+          'footer';
+  }
+  .header-common {
+      flex-direction: column;
+  }
+  .img-logo {
+      width: 50%;
+  }
+  .navbar-top {
+      flex: 1 1 100%;
+      text-align: center;
+  }
+  menu ul {
+      flex-direction: column;
+  }
+  menu li {
+      width: 100%;
+  }
+  .slider {
+    width: 100%;
+  }
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards-container-findus {
+    grid-template-columns: 1fr;
+  }
+  /*
+  .modal-content {
+    width: 90%;
+  }*/
+}
