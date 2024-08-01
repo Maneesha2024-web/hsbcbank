@@ -1,2 +1,5 @@
 scotia bank : https://www.scotiabank.com/careers/en/careers.html
 amana bank :https://www.amanabank.lk/careers/
+
+repository :https://github.com/Maneesha2024-web/hsbcbank.git
+github page url :https://github.com/Maneesha2024-web/hsbcbank
