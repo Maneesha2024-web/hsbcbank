@@ -61,3 +61,27 @@ window.addEventListener('click', (event) => {
 });
 
 */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    const modal = document.getElementById('successModal');
+    const closeBtn = document.querySelector('.modal .close');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); 
+        
+        setTimeout(() => {
+            modal.style.display = 'block'; 
+        }, 500); 
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none'; 
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none'; 
+        }
+    });
+});

@@ -27,7 +27,7 @@
                 <a href="careers.html">Careers</a>
             </div>
             <div class="navbar-top header3">
-                <a href="findus.html">Find Us</a>
+                <a href="contactus.html">About Us</a>
             </div>
             <div class="navbar-top header4">
                 <a href="contactus.html">Contact us</a>
@@ -41,31 +41,39 @@
         <div class="cards-container-reg">
             <div class="card-reg" style="width: 85%; height: 85%; margin: auto; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; background-color: white;">
                 <h2>Customer Registration</h2>
-                <form action="submit_registration" method="post">
+                <form action="index.html" method="post">
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" autofocus required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" autofocus required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" autofocus required>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Choose a Password" required>
+                        <input type="password" id="password" name="password" placeholder="Choose a Password" autofocus required>
                     </div>
                     <div class="form-group">
                         <label for="confirm-password">Confirm Password</label>
-                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Your Password" required>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Your Password" autofocus required>
                     </div>
                     <div class="form-group">
                         <button type="submit">Register</button>
                     </div>
                 </form>
+                <!-- Modal HTML -->
+                <div id="successModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Success!</h2>
+                        <p>Your registration was successful.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
