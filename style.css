@@ -482,18 +482,41 @@ button[type="submit"]:hover {
 
   .slider {
     height: 50%; /* Adjust slider height for small screens */
-  }
-  .cards-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 400px; /* Adjust this value as needed */
-    overflow-y: auto; /* Enables vertical scrolling */
-    padding: 10px; /* Optional: add padding for better spacing */
+    width:100%;
   }
 
-  .card {
-    width: 90%;
+  .cards-container-reg {
+    padding: 10px;
+    width: 100%; /* Ensure the container takes up the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+
+  .card-reg {
+    max-width: 100%; /* Ensure card width is responsive */
+    box-sizing: border-box; /* Include padding in width calculation */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .card-reg h2 {
+    font-size: 1.5em; /* Adjust heading size */
+  }
+
+  .form-group {
+    margin-bottom: 10px; /* Reduce margin for better spacing */
+  }
+
+  .form-group label {
+    font-size: 14px; /* Adjust font size for labels */
+  }
+
+  .form-group input {
+    padding: 10px; /* Increase padding for better touch interaction */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  button[type="submit"] {
+    padding: 12px; /* Increase button padding for better touch interaction */
+    font-size: 14px; /* Adjust font size */
   }
 
   .sidebar {
@@ -505,8 +528,14 @@ button[type="submit"]:hover {
     font-size: 1em;
     align-items: center;
   }
+
   .sidebar li {
     font-size: 1em;
     padding-left: 40%;
   }
+
+  .header-band-logo{
+    padding-left: 30%;
+  }
+
 }
